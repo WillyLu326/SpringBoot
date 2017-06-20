@@ -24,5 +24,8 @@ public class DemoApplication {
         for (String beanName: beanNames) {
             System.out.println(beanName);
         }
+
+        // name "user" comes from @Bean function
+        System.out.println(ctx.getBean("user"));
 	}
 }
