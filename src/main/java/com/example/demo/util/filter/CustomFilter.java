@@ -14,20 +14,20 @@ public class CustomFilter implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Filter Init");
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Do Filter");
 	}
 
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Filter Destroyed");
 	}
 
 }
