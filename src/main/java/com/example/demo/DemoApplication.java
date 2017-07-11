@@ -19,7 +19,14 @@ public class DemoApplication {
 	
 	@Bean
 	public FilterRegistrationBean filterRegistrationBean() {
-		return new FilterRegistrationBean(new CustomFilter());
+		/**
+		 *  Filter all requests
+		 */
+		//return new FilterRegistrationBean(new CustomFilter());
+		/**
+		 *  Filter specific servlet
+		 */
+		return new FilterRegistrationBean(new CustomFilter(), servletRegistrationBean());
 	}
 	
 	public static void main(String[] args) {
