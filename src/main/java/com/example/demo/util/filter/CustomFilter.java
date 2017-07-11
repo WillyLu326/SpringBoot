@@ -22,6 +22,7 @@ public class CustomFilter implements Filter {
 			throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		System.out.println("Do Filter");
+		chain.doFilter(request, response);
 	}
 
 	@Override
