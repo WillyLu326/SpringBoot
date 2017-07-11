@@ -32,7 +32,7 @@ public class DemoApplication {
 	}
 	
 	@Bean
-	public ServletListenerRegistrationBean<CustomListener> servletListenerRegistrationBean() {
+	public ServletListenerRegistrationBean<CustomListener> servletListenerRegistrationBean() {//
 		return new ServletListenerRegistrationBean<CustomListener>(new CustomListener());
 	}
 	
