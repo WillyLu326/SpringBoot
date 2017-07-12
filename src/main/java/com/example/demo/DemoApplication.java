@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 
 import com.example.demo.util.filter.CustomFilter;
+import com.example.demo.util.listener.CustomListener;
 import com.example.demo.util.servlet.CustomServlet;
 
 @SpringBootApplication
@@ -23,6 +24,7 @@ public class DemoApplication implements ServletContextInitializer{
 		servletContext.addFilter("customFilter", CustomFilter.class)
 			.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/*");
 			//.addMappingForServletNames(EnumSet.of(DispatcherType.REQUEST), true, "customServlet");
+		servletContext.addListener(new CustomListener());
 	}
 
 //	@Bean
