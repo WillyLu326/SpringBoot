@@ -15,18 +15,25 @@ import com.example.demo.util.listener.CustomListener;
 import com.example.demo.util.servlet.CustomServlet;
 
 @SpringBootApplication
-public class DemoApplication implements ServletContextInitializer{
+public class DemoApplication {
+	/**
+	 *  Second way to inject servlet, filter, listener
+	 */
+	//implements ServletContextInitializer{
 	
-	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		// TODO Auto-generated method stub
-		servletContext.addServlet("customServlet", CustomServlet.class).addMapping("/willylu");
-		servletContext.addFilter("customFilter", CustomFilter.class)
-			.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/*");
-			//.addMappingForServletNames(EnumSet.of(DispatcherType.REQUEST), true, "customServlet");
-		servletContext.addListener(new CustomListener());
-	}
+//	@Override
+//	public void onStartup(ServletContext servletContext) throws ServletException {
+//		// TODO Auto-generated method stub
+//		servletContext.addServlet("customServlet", CustomServlet.class).addMapping("/willylu");
+//		servletContext.addFilter("customFilter", CustomFilter.class)
+//			.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/*");
+//			//.addMappingForServletNames(EnumSet.of(DispatcherType.REQUEST), true, "customServlet");
+//		servletContext.addListener(new CustomListener());
+//	}
 
+	/**
+	 *  The first way to inject servlet filter listener
+	 */
 //	@Bean
 //	public ServletRegistrationBean servletRegistrationBean() {
 //		return new ServletRegistrationBean(new CustomServlet(), "/willy");
