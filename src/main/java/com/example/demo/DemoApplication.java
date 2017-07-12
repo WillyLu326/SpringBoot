@@ -7,13 +7,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 
+import com.example.demo.util.servlet.CustomServlet;
+
 @SpringBootApplication
 public class DemoApplication implements ServletContextInitializer{
 	
 	@Override
-	public void onStartup(ServletContext arg0) throws ServletException {
+	public void onStartup(ServletContext servletContext) throws ServletException {
 		// TODO Auto-generated method stub
-		
+		servletContext.addServlet("customServlet", CustomServlet.class).addMapping("/willylu");
 	}
 
 //	@Bean
