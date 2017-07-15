@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @SpringBootApplication
 public class DemoApplication {
 	/**
-	 *  Second way to inject servlet, filter, listener
+	 *  Second way to inject servlet, filter, listener Willy Lu
 	 */
 	//implements ServletContextInitializer{
 	
