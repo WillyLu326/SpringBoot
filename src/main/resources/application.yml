@@ -1,0 +1,3 @@
+pageController:
+  msg: "Config from yml file"
+  
