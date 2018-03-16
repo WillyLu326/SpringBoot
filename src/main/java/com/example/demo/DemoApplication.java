@@ -8,12 +8,6 @@ import org.springframework.context.ApplicationContext;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		
-		String[] beanNames = context.getBeanDefinitionNames();
-		
-		for (String beanName : beanNames) {
-			System.out.println(beanName);
-		}
+		SpringApplication.run(DemoApplication.class, args);
 	}
 }
