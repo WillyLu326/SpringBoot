@@ -1,3 +1,9 @@
 pageController:
   msg: "Config from yml file"
-  
+
+spring:
+  profiles:
+    active:
+    - dev
+    - prod
+    
