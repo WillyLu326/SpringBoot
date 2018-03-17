@@ -14,4 +14,6 @@ public interface NotificationService {
 	
 	public Author updateAuthor(int id, Author author);
 	
+	public void deleteAuthor(int id);
+	
 }

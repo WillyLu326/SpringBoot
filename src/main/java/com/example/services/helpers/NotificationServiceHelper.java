@@ -47,6 +47,11 @@ public class NotificationServiceHelper implements NotificationService {
 		this.authors.set(id, author);
 		return author;
 	}
+
+	@Override
+	public void deleteAuthor(int id) {
+		this.authors.remove(id);
+	}
 	
 	
 

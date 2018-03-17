@@ -39,4 +39,9 @@ public class PageController {
 		return this.notificationServiceHelper.updateAuthor(id, author);
 	}
 	
+	@RequestMapping(path = "{/id}", method = RequestMethod.DELETE)
+	public void deleteAuthor(@PathVariable int id) {
+		this.notificationServiceHelper.deleteAuthor(id);
+	}
+	
 }
