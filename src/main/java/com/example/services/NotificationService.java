@@ -10,4 +10,6 @@ public interface NotificationService {
 	
 	public Author getAuthor(int id);
 	
+	public Author postAuthor(Author author);
+	
 }
