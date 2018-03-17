@@ -34,5 +34,9 @@ public class PageController {
 		return this.notificationServiceHelper.postAuthor(author);
 	}
 	
+	@RequestMapping(path = "/{id}", method = RequestMethod.PUT)
+	public Author updateAuthor(@PathVariable int id, @RequestBody Author author) {
+		return this.notificationServiceHelper.updateAuthor(id, author);
+	}
 	
 }

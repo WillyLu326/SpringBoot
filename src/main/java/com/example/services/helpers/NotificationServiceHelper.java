@@ -41,6 +41,12 @@ public class NotificationServiceHelper implements NotificationService {
 		this.authors.add(author);
 		return author;
 	}
+
+	@Override
+	public Author updateAuthor(int id, Author author) {
+		this.authors.set(id, author);
+		return author;
+	}
 	
 	
 
