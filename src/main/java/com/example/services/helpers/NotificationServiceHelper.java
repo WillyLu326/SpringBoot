@@ -18,8 +18,8 @@ public class NotificationServiceHelper implements NotificationService {
 	}
 	
 	private void conifg() {
-		Author one = new Author(1, "Willy Lu", 29);
-		Author two = new Author(2, "Bingjie Xu", 28);
+		Author one = new Author(0, "Willy Lu", 29);
+		Author two = new Author(1, "Bingjie Xu", 28);
 		
 		this.authors = new ArrayList<>();
 		this.authors.add(one);
@@ -32,9 +32,8 @@ public class NotificationServiceHelper implements NotificationService {
 	}
 
 	@Override
-	public Author getAuthor() {
-		
-		return null;
+	public Author getAuthor(int id) {
+		return this.authors.get(id);
 	}
 	
 	

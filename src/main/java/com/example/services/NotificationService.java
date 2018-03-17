@@ -8,6 +8,6 @@ public interface NotificationService {
 
 	public List<Author> lists();
 	
-	public Author getAuthor();
+	public Author getAuthor(int id);
 	
 }
